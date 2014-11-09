@@ -1,0 +1,42 @@
+ Welcome to MASTERMIND
+ Prompt user with directions
+
+user selects to play or not too (p,play) (q, quit)
+quit anytime with q
+user enters colors
+
+print correct postions
+print correct colors/elements
+
+
+
+track number of guesses
+
+end game after 10 tries
+
+
+add some fluff!
+
+
+TDD
+
+ELEMENT CLASS
+  define colors and how many
+  Define number of positions
+  check color right position in sequence
+  check color correct color in sequence
+
+
+PROMPTUSER CLASS
+  Print Welcome to MasterMind
+  Ready to Play?
+  Push (p, or Play) to play
+  Push (q, or quit) to quit
+
+GUESS_TRACKER
+  Track Guess
+  END GAME AFTER 10
+
+GAMECLASS
+  Compare guess against colors
+  Compare guess agains position
