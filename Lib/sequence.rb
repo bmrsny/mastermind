@@ -10,7 +10,3 @@
   end
 
 end
-
-
-sequence = Sequence.new
-sequence.randomizer
