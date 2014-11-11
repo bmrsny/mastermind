@@ -5,14 +5,18 @@ require_relative '../lib/sequence'
 
 class Sequence_Test < Minitest::Test
 
-  def test_it_takes_a_sequence
-    sequence = Sequence.new(sequence)
+    def test_sequence_exists
+    sequence = Sequence.new
     assert sequence
+    end
+
+  def test_it_takes_an_array
+    sequence = Sequence.new
+    assert sequence.secret_sequence.is_a?(Array)
   end
 
   def test_it_has_a_length
-    sequence = Sequence.new(sequence)
-    assert_equal 4, sequence.sequence_length
-
+    sequence = Sequence.new
+    assert_equal 4, sequence.secret_sequence.length
   end
 end
