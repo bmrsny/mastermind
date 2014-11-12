@@ -2,12 +2,12 @@ class Guess #guess input class
   attr_reader :guess
 
   def initialize(guess)
-    @guess = guess.split('')
+    @guess = guess #guess.split('')
   end
 
   def check_guess_length
     if guess.length < 4
-      'This guess is too short, please enter a 4 letter guess'
+      "This guess is too short, please enter a 4 letter guess"
     elsif guess.length > 4
       'This guess is too short, please enter a 4 letter guess'
     end

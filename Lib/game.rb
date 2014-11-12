@@ -17,12 +17,18 @@ class Game
   def play
     p sequence.sequence
     until win? || quit?
+      puts printer.color_instructions
+      puts printer.example_code
       puts printer.game_command_request
-      @guess = gets.strip.downcase
-      guess_eval = GuessEvaluator.new(guess.chars, sequence.sequence)
+      @guess = gets.strip.downcase.chars
+      guess_eval = GuessEvaluator.new(guess, sequence.sequence)
+      guess_input = Guess.new(guess)
+
       if guess_eval.correct_match?
         puts printer.game_win
       else
+        puts guess_input.check_guess_length
+        puts guess_input.check_guess_colors
         num_colors = guess_eval.correct_colors
         num_positions = guess_eval.correct_positions
         puts printer.results(num_colors, num_positions)
@@ -31,7 +37,7 @@ class Game
   end
 
   def win?
-    guess.chars == sequence.sequence
+    guess == sequence.sequence
   end
 
   def quit?

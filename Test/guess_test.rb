@@ -6,7 +6,7 @@ require_relative '../lib/guess'
 class GuessTest < Minitest::Test
   def test_it_has_a_guess
     guess = Guess.new('bbbb')
-    assert_equal %w(b b b b), guess.guess
+    assert_equal 'bbbb', guess.guess
   end
 
   def test_guess_is_not_valid_if_shorter_than_four

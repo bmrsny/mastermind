@@ -15,22 +15,12 @@ class GuessEvaluator
   def correct_colors
     sequence_duplicate = sequence.dup
     @counter = 0
-    
+
     guess.each do |letter|
       @counter += 1 if sequence_duplicate.include?(letter)
       sequence_duplicate.delete(letter)
     end
     @counter
-
-    # need_to_guess = sequence.dup
-    # guess.each do |guess_letter|
-    #   index = need_to_guess.find_index(guess_letter)
-    #   if index != nil
-    #     need_to_guess.delete_at(index)
-    #   end
-    # end
-    #
-    # amount_of_correct_guess = (guess.length - need_to_guess.length)
   end
 
   def correct_positions

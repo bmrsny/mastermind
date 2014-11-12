@@ -17,7 +17,7 @@ class Printer
   end
 
   def ending
-    "Good ye!!!!"
+    "Good Bye!!!!"
   end
 
   def game_win
@@ -34,9 +34,17 @@ class Printer
     "Enter your guess: "
   end
 
-  def game_instructions
-    "Game instructions."
+  def color_instructions
+    "Choose (R)ed, (B)lue, (Yellow), or (G)reen"
   end
+
+  def example_code
+    "Example: rgby"
+  end
+
+  # def game_instructions
+  #   "Game instructions."
+  # end
 
   def results(num_colors, num_positions)
     "You have #{num_colors} colors correct and #{num_positions} positions correct"
@@ -53,6 +61,18 @@ class Printer
       ▀█   ███   █▀    ███    █▀   ▄████████▀     ▄████▀     ██████████   ███    ███  ▀█   ███   █▀  █▀    ▀█   █▀  ████████▀
                                                                           ███    ███
     "
+  end
+
+  def until_next_time
+  "  ██╗   ██╗███╗   ██╗████████╗██╗██╗         ███╗   ██╗███████╗██╗  ██╗████████╗    ████████╗██╗███╗   ███╗███████╗    ██╗██╗██╗
+██║   ██║████╗  ██║╚══██╔══╝██║██║         ████╗  ██║██╔════╝╚██╗██╔╝╚══██╔══╝    ╚══██╔══╝██║████╗ ████║██╔════╝    ██║██║██║
+██║   ██║██╔██╗ ██║   ██║   ██║██║         ██╔██╗ ██║█████╗   ╚███╔╝    ██║          ██║   ██║██╔████╔██║█████╗      ██║██║██║
+██║   ██║██║╚██╗██║   ██║   ██║██║         ██║╚██╗██║██╔══╝   ██╔██╗    ██║          ██║   ██║██║╚██╔╝██║██╔══╝      ╚═╝╚═╝╚═╝
+╚██████╔╝██║ ╚████║   ██║   ██║███████╗    ██║ ╚████║███████╗██╔╝ ██╗   ██║          ██║   ██║██║ ╚═╝ ██║███████╗    ██╗██╗██╗
+ ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚═╝╚══════╝    ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═╝   ╚═╝          ╚═╝   ╚═╝╚═╝     ╚═╝╚══════╝    ╚═╝╚═╝╚═╝
+"
+
+
   end
 
 end

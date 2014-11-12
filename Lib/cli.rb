@@ -25,7 +25,7 @@ class CLI #repel
       when play?
         puts printer.lets_begin
         game = Game.new
-        game.play  #NEED TO CREATE STILL
+        game.play
         puts 'What do you want to do now?'
       when instructions?
         puts printer.game_instructions
@@ -37,6 +37,7 @@ class CLI #repel
       end
     end
     puts printer.ending
+    puts printer.until_next_time
   end
 
   def play?

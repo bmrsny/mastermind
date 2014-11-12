@@ -6,8 +6,4 @@ require_relative '../lib/element'
 
 class IntegrationTest < Minitest::Test
 
-  def method_name
-
-  end
-
 end
