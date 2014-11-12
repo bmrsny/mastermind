@@ -1,5 +1,6 @@
 require_relative 'printer'
 require_relative 'game'
+require 'colorize'
 
 class CLI #repel
   attr_reader :printer,
@@ -11,9 +12,9 @@ class CLI #repel
   end
 
   def start
-    puts printer.graphic
+    puts printer.graphic.cyan
     puts printer.welcome_message
-    puts printer.play_instructions
+    puts printer.play_instructions.yellow
 
     # Game = game.new
 
@@ -26,19 +27,20 @@ class CLI #repel
         puts printer.lets_begin
         game = Game.new
         game.play
-        puts 'What do you want to do now?'
-        puts printer.play_instructions
+        # puts 'What do you want to do no?'
+        puts "Do you really want to quit?".red
+        puts printer.play_instructions.yellow
       when instructions?
         puts printer.game_instructions
       when quit?
         puts printer.game_quit
       else
-        puts "I do not know this command"
+        puts "I do not know this command".red
         # puts printer.graphic
       end
     end
     puts printer.ending
-    puts printer.until_next_time
+    puts printer.until_next_time.magenta
   end
 
   def play?

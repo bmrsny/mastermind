@@ -1,3 +1,4 @@
+
 class Guess #guess input class
   attr_reader :guess
 

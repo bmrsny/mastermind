@@ -2,6 +2,7 @@ require_relative 'guess'
 require_relative 'sequence'
 require_relative 'printer'
 require_relative 'guess_evaluator'
+require 'colorize'
 
 class Game
   attr_reader :sequence,
@@ -27,7 +28,7 @@ class Game
       guess_input = Guess.new(guess)
 
       if guess_eval.correct_match?
-        puts printer.game_win
+        puts printer.game_win.green
       else
         puts guess_input.check_guess_length
         puts guess_input.check_guess_colors
