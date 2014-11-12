@@ -17,10 +17,12 @@ class Game
   def play
     p sequence.sequence
     until win? || quit?
+
       puts printer.color_instructions
-      puts printer.example_code
+      #puts printer.example_code
       puts printer.game_command_request
       @guess = gets.strip.downcase.chars
+      puts printer.game_split_up_screen
       guess_eval = GuessEvaluator.new(guess, sequence.sequence)
       guess_input = Guess.new(guess)
 
@@ -32,6 +34,7 @@ class Game
         num_colors = guess_eval.correct_colors
         num_positions = guess_eval.correct_positions
         puts printer.results(num_colors, num_positions)
+        puts printer.game_split_up_screen
       end
     end
   end
@@ -41,7 +44,7 @@ class Game
   end
 
   def quit?
-    guess == 'q' || guess == 'quit'
+    guess == ['q'] || guess == ['quit']
   end
 
 end

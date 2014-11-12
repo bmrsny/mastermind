@@ -27,6 +27,7 @@ class CLI #repel
         game = Game.new
         game.play
         puts 'What do you want to do now?'
+        puts printer.play_instructions
       when instructions?
         puts printer.game_instructions
       when quit?

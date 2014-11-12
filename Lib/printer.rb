@@ -34,12 +34,20 @@ class Printer
     "Enter your guess: "
   end
 
+  def game_split_up_screen
+    "-------------------------------------------"
+  end
+
   def color_instructions
     "Choose (R)ed, (B)lue, (Yellow), or (G)reen"
   end
 
   def example_code
-    "Example: rgby"
+    "Example: r g b y"
+  end
+
+  def previous_guess(guess)
+    "Here is your previous guess #{guess}"
   end
 
   # def game_instructions
@@ -51,7 +59,7 @@ class Printer
   end
 
   def graphic
-    "   ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████     ███        ▄████████    ▄████████   ▄▄▄▄███▄▄▄▄    ▄█  ███▄▄▄▄   ████████▄
+    " ▄▄▄▄███▄▄▄▄      ▄████████    ▄████████     ███        ▄████████    ▄████████   ▄▄▄▄███▄▄▄▄    ▄█  ███▄▄▄▄   ████████▄
      ▄██▀▀▀███▀▀▀██▄   ███    ███   ███    ███ ▀█████████▄   ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄ ███  ███▀▀▀██▄ ███   ▀███
      ███   ███   ███   ███    ███   ███    █▀     ▀███▀▀██   ███    █▀    ███    ███ ███   ███   ███ ███▌ ███   ███ ███    ███
      ███   ███   ███   ███    ███   ███            ███   ▀  ▄███▄▄▄      ▄███▄▄▄▄██▀ ███   ███   ███ ███▌ ███   ███ ███    ███
