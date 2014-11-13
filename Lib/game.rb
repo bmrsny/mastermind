@@ -27,7 +27,7 @@ class Game
       guess_input = Guess.new(guess)
 
       if guess_eval.correct_match?
-        printer.game_win.green
+        printer.game_win
       else
         guess_input.check_guess_length
         guess_input.check_guess_colors
