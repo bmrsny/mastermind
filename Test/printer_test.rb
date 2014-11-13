@@ -1,7 +1,7 @@
 gem 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative '../lib/display'
+require_relative '../lib/printer'
 
 class DisplayTest < Minitest::Test
 
