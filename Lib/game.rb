@@ -18,11 +18,9 @@ class Game
   end
 
   def play
-    p sequence.sequence
     until win? || quit?
       puts printer.user_guess_count_printer(guess_counter).green
       puts printer.color_instructions
-      #puts printer.example_code
       puts printer.game_command_request
       @guess = gets.strip.downcase.chars
       puts printer.game_split_up_screen
@@ -38,6 +36,10 @@ class Game
         num_positions = guess_eval.correct_positions
         puts printer.results(num_colors, num_positions)
         @guess_counter += 1
+        # @guess_counter << guess_input
+        # puts turn_counter
+        # display.turn_counter
+        # turn_counter
         puts printer.game_split_up_screen
       end
     end
@@ -50,5 +52,14 @@ class Game
   def quit?
     guess == ['q'] || guess == ['quit']
   end
+
+  # def turn_counter
+  #   @guess_counter.length
+  #   "You are on guess #: #{@guess_counter.length}"
+  # end
+
+  # def secret_code? # try to have a cheat code for sequence
+  #   return sequence.sequence if guess == ['secr']
+  # end
 
 end

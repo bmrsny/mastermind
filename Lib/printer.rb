@@ -21,13 +21,19 @@ class Printer
   end
 
   def game_win
-    "You win"
-    # +program_instructions
+    "
+_/      _/    _/_/    _/    _/      _/          _/  _/_/_/  _/      _/  _/  _/  _/
+ _/  _/    _/    _/  _/    _/      _/          _/    _/    _/_/    _/  _/  _/  _/
+  _/      _/    _/  _/    _/      _/    _/    _/    _/    _/  _/  _/  _/  _/  _/
+ _/      _/    _/  _/    _/        _/  _/  _/      _/    _/    _/_/
+_/        _/_/      _/_/            _/  _/      _/_/_/  _/      _/  _/  _/  _/
+
+
+".green
   end
 
   def game_quit
     "Exiting the game."
-    # +program_instructions
   end
 
   def game_command_request
@@ -52,6 +58,10 @@ class Printer
 
   def user_guess_count_printer(guess_counter)
     "Current guess: # #{guess_counter}\n "
+  end
+
+  def turn_counter
+    "Your on guess # : #{guess_counter}"
   end
 
   # def game_instructions
