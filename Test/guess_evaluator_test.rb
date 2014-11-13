@@ -52,6 +52,22 @@ class GuessEvaluatorTest < Minitest::Test
       assert_equal 4, guess_evaluator.correct_colors
     end
 
+    def test_has_1_correct_positions
+      guess    = ["r", "b", "b", "b"]
+      sequence = ["r", "g", "r", "r"]
+
+      guess_evaluator = GuessEvaluator.new(guess, sequence)
+      assert_equal 1, guess_evaluator.correct_positions
+    end
+
+    def test_has_2_correct_positions
+      guess    = ["r", "g", "b", "b"]
+      sequence = ["r", "g", "r", "r"]
+
+      guess_evaluator = GuessEvaluator.new(guess, sequence)
+      assert_equal 2, guess_evaluator.correct_positions
+    end
+
     def test_has_3_correct_positions
       guess    = ["r", "g", "r", "b"]
       sequence = ["r", "g", "r", "r"]
@@ -59,5 +75,4 @@ class GuessEvaluatorTest < Minitest::Test
       guess_evaluator = GuessEvaluator.new(guess, sequence)
       assert_equal 3, guess_evaluator.correct_positions
     end
-
 end

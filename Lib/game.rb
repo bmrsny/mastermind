@@ -29,8 +29,8 @@ class Game
       if guess_eval.correct_match?
         printer.game_win
       else
-        guess_input.check_guess_length
-        guess_input.check_guess_colors
+        puts guess_input.check_guess_length
+        puts guess_input.check_guess_colors
         num_colors = guess_eval.correct_colors
         num_positions = guess_eval.correct_positions
         printer.results(num_colors, num_positions)
