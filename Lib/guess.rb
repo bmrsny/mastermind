@@ -1,9 +1,9 @@
 
-class Guess #guess input class
+class Guess
   attr_reader :guess
 
   def initialize(guess)
-    @guess = guess #guess.split('')
+    @guess = guess
   end
 
   def check_guess_length
