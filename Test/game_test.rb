@@ -18,9 +18,4 @@ class GameTest < Minitest::Test
     guess_input = Guess.new('')
     assert_equal '', guess_input.guess
   end
-
-  def test_game_takes_a_guess
-    skip
-    game = Game.new  
-  end
 end

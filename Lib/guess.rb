@@ -8,9 +8,7 @@ class Guess
 
   def check_guess_length
     if guess.length < 4
-      "This guess is too short, please enter a 4 letter guess".red
     elsif guess.length > 4
-      'This guess is too long, please enter a 4 letter guess'.red
     end
   end
 

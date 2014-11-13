@@ -42,7 +42,7 @@ class Printer
   end
 
   def game_command_request
-    puts "Enter your guess: "
+    print "Enter your guess: "
   end
 
   def game_split_up_screen
@@ -51,6 +51,14 @@ class Printer
 
   def color_instructions
     puts "Choose (R)ed, (B)lue, (Yellow), or (G)reen".yellow
+  end
+
+  def check_guess_length_and_print(guess)
+    if guess.length < 4
+      puts "This guess is too short, please enter a 4 letter guess".red
+    elsif guess.length > 4
+      puts 'This guess is too long, please enter a 4 letter guess'.red
+    end
   end
 
   def example_code
